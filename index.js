@@ -27,7 +27,7 @@ app.get("/noAuth", async (req, res) => {
     // const result = JSON.parse(response);
     const result=response.data;
     console.log(response);
-    res.render("index.ejs", { content: result});
+    res.render("index.ejs", { content: result.secret});
   } catch (error) {
     console.error("Failed to make request:", error.message);
     res.render("index.ejs", {
